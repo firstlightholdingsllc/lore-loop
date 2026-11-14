@@ -1,26 +1,36 @@
-# Lore-Loop
+# Lore-Loop — Your life. Your cast. Your next episode.
 
-Mobile-first Lore-Loop starter built with Next.js App Router and React. This is a **working local prototype**, not a deployed social network.
+Next.js mobile-first creative prototype for Lore-Loop. The core social experience is planned to be free, while AI video generation will be subject to transparent usage limits and credits.
 
-## Get started
+## Current prototype
+
+- Vibrant coral, purple, cyan and blue mobile-first styling
+- Home feed with sample stories and local likes
+- Create Lore with **1–3 blended genres** (Comedy, Horror, Drama, Mystery, Action, Fantasy, Romance, Documentary, Nostalgia, Sci-Fi)
+- Local **four-scene storyboard previews** and season/episode numbering
+- Save episodes locally, with private/Loop/public **preview-only** intent selection
+- **Your Series** page and an outline for a monthly recap movie
+- Avatar emoji and multi-select character vibes, profiles, sample Loops
+
+**Important:** This is a browser-local demo. Neither the privacy selection nor a group label changes server access because there is no shared backend yet. No AI text, images, video or narration is generated. No video costs are incurred by using the demo. Video recap is an **outline only**, not a rendered movie. Real authentication, cloud sync, consent, moderation, private Loop permissions and billing must be implemented before launching to real users.
+
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000. The site includes a feed, local story-card maker, avatar selection, sample groups, and a profile. Content persists only in the browser's localStorage. It does **not** call any AI API, store cloud records, or authenticate users.
+Open http://localhost:3000.
 
-## Deployment
+## Development roadmap
 
-Import this GitHub repository into a **separate** Vercel project named `lore-loop-staging`, with framework Next.js. Do not connect the production domain until the preview is reviewed.
+1. Validate interface and run a production build in connected deployment environment.
+2. Create a **dedicated Lore-Loop Supabase project**, Auth, profiles, posts, Loops, memberships, characters, episodic metadata and row-level security.
+3. Real AI story and storyboard endpoint: server-side API, prompt/input moderation, cost/usage budgets and human review before publication.
+4. Character image consistency, optional video-generation queue, signed/private media, generation retries and credit limits.
+5. Monthly movie *assembler* that reuses saved clips and photos, optionally producing a few new transitions.
+6. Collaborative story perspectives with consent, followable series, notifications and analytics.
+7. Accessibility, browser/mobile testing, production security review and PWA-to-native packaging.
 
-## Next steps
-
-1. Create a dedicated Lore-Loop Supabase project, configure Auth and row-level security.
-2. Implement profiles, avatars, posts, group memberships and permissions.
-3. Add server-only story generation, moderation, consent checks, and per-user limits.
-4. Add image generation and asynchronous video jobs with usage budgets.
-5. Build PWA installation and then evaluate iOS/Android packaging.
-
-**Privacy:** This repo is public and contains no secrets. Do not put user data or AI keys into source files. Browser-local prototype stories are visible to others sharing that browser profile.
+Never commit API secrets to this public repository.
